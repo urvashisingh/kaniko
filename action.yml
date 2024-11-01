@@ -95,3 +95,13 @@ runs:
         DOCKER_BUILD_ARGS: ${{ inputs.build-args }}
         DOCKER_LABELS: ${{ inputs.labels }}
         CLOUDBEES_REGISTRY_CONFIG: ${{ inputs.registry-configuration }}
+    - id: artifact-published
+      name: Raise artifact published event
+      uses: "cloudbees-io/publish-evidence-item@v1"
+      with:
+        content: |
+          Published build artifacts
+          |*Name                                           | Version |
+          | ---------------------------------------------- | ------- |
+          |  index.docker.io/urvashisingh/my-sample-go-app |  1.0.0  |
+          |  index.docker.io/urvashisingh/test-go-app      |  2.0.3  |
