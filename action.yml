@@ -101,7 +101,7 @@ runs:
       with:
         content: |
           Published build artifacts
-          |*Name                                           | Version |
+          | Name                                           | Version |
           | ---------------------------------------------- | ------- |
           |  index.docker.io/urvashisingh/my-sample-go-app |  1.0.0  |
           |  index.docker.io/urvashisingh/test-go-app      |  2.0.3  |
